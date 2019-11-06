@@ -3,32 +3,16 @@
     <section class="intro">
       <h1>Get the latest tech news!</h1>
     </section>
-    <section class="featured-posts">
-      <PostPreview
-        id="1"
-        thumbnail="https://media.dhakatribune.com/uploads/2019/08/bigstock-creating-software-and-website-295627450-1564745123094.jpg"
-        title="Hello there!"
-        previewText="This is my first post!"/>
-      <PostPreview
-        id="2"
-        thumbnail="https://media.dhakatribune.com/uploads/2019/08/bigstock-creating-software-and-website-295627450-1564745123094.jpg"
-        title="Hello there - the second time!"
-        previewText="This is my second post!"/>
-      <PostPreview
-        id="3"
-        thumbnail="https://media.dhakatribune.com/uploads/2019/08/bigstock-creating-software-and-website-295627450-1564745123094.jpg"
-        title="Hi!"
-        previewText="This is my third post!"/>
-    </section>
+    <PostList/>
   </div>
 </template>
 
 <script>
-  import PostPreview from '@/components/Posts/PostPreview'
+  import PostList from '@/components/Posts/PostList'
 
   export default {
     components: {
-      PostPreview
+      PostList
     }
   }
 </script>
@@ -62,14 +46,5 @@
     .intro h1 {
       font-size: 2rem;
     }
-  }
-
-  .featured-posts {
-    display: flex;
-    padding: 20px;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
   }
 </style>
