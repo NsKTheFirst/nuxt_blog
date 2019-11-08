@@ -2,16 +2,19 @@
   <section class="posts-list">
     <PostPreview
       id="1"
+      :is-admin="isAdmin"
       thumbnail="https://media.dhakatribune.com/uploads/2019/08/bigstock-creating-software-and-website-295627450-1564745123094.jpg"
       title="Hello there!"
       previewText="This is my first post!"/>
     <PostPreview
       id="2"
+      :is-admin="isAdmin"
       thumbnail="https://media.dhakatribune.com/uploads/2019/08/bigstock-creating-software-and-website-295627450-1564745123094.jpg"
       title="Hello there - the second time!"
       previewText="This is my second post!"/>
     <PostPreview
       id="3"
+      :is-admin="isAdmin"
       thumbnail="https://media.dhakatribune.com/uploads/2019/08/bigstock-creating-software-and-website-295627450-1564745123094.jpg"
       title="Hi!"
       previewText="This is my third post!"/>
@@ -24,6 +27,12 @@
     name: "PostList",
     components: {
       PostPreview
+    },
+    props: {
+      isAdmin: {
+        type: Boolean,
+        default: false
+      }
     }
   }
 </script>
